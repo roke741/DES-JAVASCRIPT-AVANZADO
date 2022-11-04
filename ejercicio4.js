@@ -16,8 +16,8 @@ let op = Number(prompt("Ingrese 1 para registrar paciente o 2 para salir"))
 while (op === 1 ){
     let nombre = prompt("Ingrese su nombre: ");
     let edad =Number(prompt("Ingrese su edad: "));
-    let sexo = prompt("Ingrese su sexo: ");
-    let distrito = prompt("Ingrese su distrito: ");
+    let sexo = prompt("Ingrese su sexo (varon o mujer): ");
+    let distrito = prompt("Ingrese su distrito (D1 , D2 , D3): ");
     switch(distrito.toUpperCase()){
         case "D1": listaDistrito1.push([nombre, edad , sexo]); break;
         case "D2": listaDistrito2.push([nombre, edad , sexo]); break;
@@ -25,7 +25,7 @@ while (op === 1 ){
         default: break;
     }
     //listaProductos.push([nombre, categoria, cantStock, precio])
-    op = Number(prompt("Desea continuar agregando productos ?(ingrese 1 para continuar, 2 para salir)"))
+    op = Number(prompt("Desea continuar registrando pacientes? (ingrese 1 para continuar, 2 para salir)"))
 }
 console.log(listaDistrito1)
 console.log(listaDistrito2)
@@ -36,21 +36,21 @@ let contadorVarones = 0
 let contadorMujeres = 0
 console.log("1. Cantidad de pacientes varones y mujeres")
 for(let i = 0; i <listaDistrito1; i++){
-    if(listaDistrito1[i][2].toUpperCase() === "VARONES"){
+    if(listaDistrito1[i][2].toUpperCase() === "VARON"){
         contadorVarones += 1
     }else{
         contadorMujeres += 1
     }
 }
 for(let i = 0; i <listaDistrito2; i++){
-    if(listaDistrito1[i][2].toUpperCase() === "VARONES"){
+    if(listaDistrito1[i][2].toUpperCase() === "VARON"){
         contadorVarones += 1
     }else{
         contadorMujeres += 1
     }
 }
 for(let i = 0; i <listaDistrito3; i++){
-    if(listaDistrito1[i][2].toUpperCase() === "VARONES"){
+    if(listaDistrito1[i][2].toUpperCase() === "VARON"){
         contadorVarones += 1
     }else{
         contadorMujeres += 1
