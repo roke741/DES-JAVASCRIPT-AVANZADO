@@ -24,6 +24,7 @@ while (op === 1 ){
         case "N": listaNatural.push([nombre, cantStock , precio]); break;
         case "G": listaGenerica.push([nombre, cantStock , precio]); break;
         case "O": listaOtros.push([nombre, cantStock , precio]); break;
+        default: break;
     }
     //listaProductos.push([nombre, categoria, cantStock, precio])
     op = Number(prompt("Desea continuar agregando productos ?(ingrese 1 para continuar, 2 para salir)"))

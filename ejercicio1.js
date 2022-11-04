@@ -32,7 +32,7 @@ var precioFinal
 
 if(proveedor.toUpperCase() === "INTIPALKA"){
     let preciobaseInti = categoria.toUpperCase() === "T" ? 100 : categoria.toUpperCase() === "B" ? 80 : "categoria no valida";
-    console.log(categoria, tipo, proveedor )
+    //console.log(categoria, tipo, proveedor )
     switch(tipo.toUpperCase()){
         case "S":
             precioFinal = preciobaseInti + (preciobaseInti * 0.15)
@@ -73,8 +73,7 @@ if(proveedor.toUpperCase() === "INTIPALKA"){
     }
 }else if(proveedor.toUpperCase() === "TACAMA"){
     let preciobaseTacma = categoria.toUpperCase() === "T" ? 200 : categoria.toUpperCase() === "B" ? 120 : "categoria no valida";
-    console.log(categoria, tipo, proveedor)
-
+    //console.log(categoria, tipo, proveedor)
     switch(tipo.toUpperCase()){
         case "S":
             precioFinal = preciobaseTacma + (preciobaseTacma * 0.20)
