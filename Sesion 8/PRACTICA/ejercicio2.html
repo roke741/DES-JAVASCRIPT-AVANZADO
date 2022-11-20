@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <pre>
+    Ejercicio 02
+    Un instituto desea mostrar a los alumnos los cursos que se dictan por carrera y por ciclo.
+    Asuma dos carreras, dos ciclos por carrera y 3 cursos por ciclo.  
+    Cada curso tiene: codigo, nombre, cantidad de creditos y duración en horas.
+    Crear un documento web que permita elegir la carrera y el ciclo para mostrar una tabla con los cursos que corresponde a acad uno.
+    
+
+    carrera1 computacion 
+        ciclo 1 
+            curso 1
+            curso 2
+            curso 3
+
+        ciclo 2
+            curso 1
+            curso 2
+            curso 3
+
+    carrera2 administracion 
+        ciclo 1
+            curso 1
+            curso 2
+            curso 3
+        
+        ciclo 2
+            curso 1
+            curso 2
+            curso 3
+
+    </pre>
+    
+
+    <div>
+        <select name="carrera" id="carrera">
+            <option value="1">Carrera 1</option>
+            <option value="2">Carrera 2</option>
+        </select>
+        <select name="ciclo" id="ciclo" >
+            <option value="1">Ciclo 1</option>
+            <option value="2">Ciclo 2</option>
+        </select>
+
+        <div class="" id="mostrarCursos">
+            <table border='1'>
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Nombre</th>
+                        <th>Creditos</th>
+                        <th>Horas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Curso 1</td>
+                        <td>Programacion1</td>
+                        <td>5 </td>
+                        <td>100 </td>
+                    </tr>
+                    <tr>
+                        <td>Curso 2</td>
+                        <td>Programacion2</td>
+                        <td>8 </td>
+                        <td>120 </td>
+                    </tr>
+                    <tr>
+                        <td>Curso 3</td>
+                        <td>Programacion 3</td>
+                        <td>1 </td>
+                        <td>50 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <script>
+        $("#ciclo, #carrera").change(function(){
+            if($("#carrera").val() == 1 && $("#ciclo").val() == 1){
+                $("#mostrarCursos").html(`
+                    <table border='1'>
+                        <thead>
+                            <tr>
+                                <th>Curso</th>
+                                <th>Nombre</th>
+                                <th>Creditos</th>
+                                <th>Horas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Curso 1</td>
+                                <td>Programacion1</td>
+                                <td>5 </td>
+                                <td>100 </td>
+                            </tr>
+                            <tr>
+                                <td>Curso 2</td>
+                                <td>Programacion2</td>
+                                <td>8 </td>
+                                <td>120 </td>
+                            </tr>
+                            <tr>
+                                <td>Curso 3</td>
+                                <td>Programacion 3</td>
+                                <td>1 </td>
+                                <td>50 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                `)
+            }
+            if($("#carrera").val() == 1 && $("#ciclo").val() == 2){
+                $("#mostrarCursos").html(`
+                <table border='1'>
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Nombre</th>
+                        <th>Creditos</th>
+                        <th>Horas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Curso 1</td>
+                        <td>java 1</td>
+                        <td>5 </td>
+                        <td>100 </td>
+                    </tr>
+                    <tr>
+                        <td>Curso 2</td>
+                        <td>java 2</td>
+                        <td>8 </td>
+                        <td>120 </td>
+                    </tr>
+                    <tr>
+                        <td>Curso 3</td>
+                        <td>java 3</td>
+                        <td>1 </td>
+                        <td>50 </td>
+                    </tr>
+                </tbody>
+                </table>`)
+            }
+            
+        });
+        $("#ciclo, #carrera").change(function(){
+            if($("#carrera").val() == 2 && $("#ciclo").val() == 1){
+                $("#mostrarCursos").html(`
+                <table border='1'>
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Nombre</th>
+                        <th>Creditos</th>
+                        <th>Horas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Curso 1</td>
+                        <td>Excel 1</td>
+                        <td>5 </td>
+                        <td>100 </td>
+                    </tr>
+                    <tr>
+                        <td>Curso 2</td>
+                        <td>Excel 2</td>
+                        <td>8 </td>
+                        <td>120 </td>
+                    </tr>
+                    <tr>
+                        <td>Curso 3</td>
+                        <td>Excel 3</td>
+                        <td>1 </td>
+                        <td>50 </td>
+                    </tr>
+                </tbody>
+                </table>`)
+            }
+            if($("#carrera").val() == 2 && $("#ciclo").val() == 2){
+                $("#mostrarCursos").html(`
+                <table border='1'>
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Nombre</th>
+                        <th>Creditos</th>
+                        <th>Horas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Curso 1</td>
+                        <td>Word 1</td>
+                        <td>5 </td>
+                        <td>100 </td>
+                    </tr>
+                    <tr>
+                        <td>Curso 2</td>
+                        <td>Word 2</td>
+                        <td>8 </td>
+                        <td>120 </td>
+                    </tr>
+                    <tr>
+                        <td>Curso 3</td>
+                        <td>Word 3</td>
+                        <td>1 </td>
+                        <td>50 </td>
+                    </tr>
+                </tbody>
+                </table>`)
+            }
+        });
+    </script>
+
+</body>
+</html>

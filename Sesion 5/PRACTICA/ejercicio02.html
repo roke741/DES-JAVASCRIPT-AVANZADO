@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 02</title>
+</head>
+
+<body>
+    <h2>Ejercicio02</h2>
+    <pre>
+        Ingreaar 5 notas de un alumno y calcular el promedio, tomando en cuenta el tipo de alumno:
+        1. Si es regular el promedio sera entre las 5 notas.
+        2. Si es espcial se tomara en cuenta las 4 notas mayores para el promedio.
+    </pre>
+    <form action="ejercicio02.html" method="get">
+        Ingrese su nombre:
+        <br>
+        <input name="nombre" id="nombre" type="text">
+        <br>
+        <br>
+        Tipo de alumno:
+        <br>
+        Regular<input id="txtRadio" type="radio" name="txtRadio" value="1"/>
+        Especial<input id="txtRadio" type="radio" name="txtRadio" value="2"/>
+        <br>
+        <br>        
+        Ingrese sus notas:
+        <br>
+        <input name="nota1" id="nota1" type="number" min="1" max="20">
+        <input name="nota2" id="nota2" type="number" min="1" max="20">
+        <input name="nota3" id="nota3" type="number" min="1" max="20">
+        <input name="nota4" id="nota4" type="number" min="1" max="20">
+        <input name="nota5" id="nota5" type="number" min="1" max="20">
+        <br>
+        <br>
+        <input type="button" value="Calcular Promedio" onclick="f01()">
+    </form>
+    <script src="js/ejercicio02.js"></script>
+</body>
+
+</html>

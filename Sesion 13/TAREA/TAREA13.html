@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <h1>MULTIPLAN</h1>
+    <div ng-app="multiplan" ng-controller = "multiplanCtrl">
+        <label for="">Ingrese ek kilometraje</label>
+        <input type="number" ng-model="km" min="0" ng-change="calcularTotal()" id="km1">
+        <p>Total a pagar: S/.{{total}} </p>
+    </div>
+    <script>
+        var app= angular.module('multiplan', []);
+        app.controller('multiplanCtrl', function ($scope){
+            $scope.km = this.km;
+            $scope.calcularTotal = function(){
+                if (this.km < 300){
+                    $scope.total = 250
+                }else if(this.km > 300 && this.km < 1000){
+                    $scope.total =  250 + ((this.km - 300) * 30);
+                }else if(this.km > 1000){
+                    $scope.total =  250 + ((this.km-300) * 30) + ((this.km-1000) * 20)
+                }
+                if(this.total > 500){
+                    $scope.total = this.total- (this.total * 0.10)
+                }
+                //console.log(this.km)
+            };
+        });
+    </script>
+</body>
+</html>

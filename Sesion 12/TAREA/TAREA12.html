@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mostrando Datos</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>NOMBRES</td>
+                <td>APELLIDOS</td>
+            </tr>
+        </thead>
+        <tbody id="datosTabla">
+            
+        </tbody>
+    </table>
+
+    <script>
+        let user = [
+            {
+                "id":1,
+                "nombres": "Ana",
+                "apellidos": "Macia Pajas"
+            },{
+                "id":2,
+                "nombres": "Antonio",
+                "apellidos": "Sueltamelo"
+            },{
+                "id":3,
+                "nombres": "Elba",
+                "apellidos": "Lazo"
+            },
+        ]
+        let tabla = document.getElementById("datosTabla");
+        for (let i = 0; i < user.length; i++){
+            tabla.innerHTML += "<tr> <td>"+user[i].id+"</td> <td>"+user[i].nombres+"</td><td>"+user[i].apellidos+"</td> </tr>"
+        }
+
+    </script>
+
+    
+</body>
+</html>

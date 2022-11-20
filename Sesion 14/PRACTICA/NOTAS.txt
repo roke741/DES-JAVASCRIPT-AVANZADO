@@ -1,0 +1,139 @@
+xqEjercicios:
+
+Ejercicio 01 [tiempo=15 min]:
+Desarrollar una aplicacion angular que permita mostrar los datos de un aula y sus 5 alumnos(id, nombre, promedio, estado) junto con el curso que llevan(id, nombre, precio) yel profesor del curos(id, nombre).
+Use Scopes para el caso.
+
+Ejercicio 02 [tiempo=15 min]:
+Desarrollar una aplicacion angular que permita ingresar y mostrar los datos de un aula y sus 3 alumnos(id, nombre, promedio, estado) junto con el curso que llevan(id, nombre, precio) yel profesor del curos(id, nombre).
+Use Scopes y formularios para el caso
+    
+Ejercicio 03 [tiempo=15 min]:
+Ahora haga que los campos del caso anterior esten validados.
+
+
+--------------------------------prueba01.html---------------------------------
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trabajando con Angular JS</title>
+    
+    <!--cargando librerias de Angular JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <h1>Ejemplo Angular JS</h1>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <h3>{{nombre}}</h3>
+    </div> 
+
+    <script>
+        var app= angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.nombre = "juan";
+        });
+    </script>
+
+</body>
+</html>
+--------------------------------prueba02.html---------------------------------
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trabajando con Angular JS</title>
+    
+    <!--cargando librerias de Angular JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <h1>Ejemplo Angular JS</h1>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        nombre: <input type="text" ng-model="nombre">
+        <h3>mi nombre es: {{nombre}}</h3>
+    </div>
+
+    <script>
+        var app= angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.nombre = "juan";
+        });
+    </script>
+
+</body>
+</html>
+--------------------------------prueba03.html---------------------------------
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trabajando con Angular JS</title>
+    
+    <!--cargando librerias de Angular JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <h1>Ejemplo Angular JS</h1>
+    <div ng-app="myApp" ng-controller="formCtrl">
+        <form>
+            nombre: <input type="text" ng-model="nombre">
+        </form>
+        
+        <h3>mi nombre es: {{nombre}}</h3>
+    </div>
+
+    <script>
+        var app= angular.module('myApp', []);
+        app.controller('formCtrl', function($scope) {
+            $scope.nombre = "juan";
+        });
+    </script>
+
+</body>
+</html>
+--------------------------------prueba04.html---------------------------------
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trabajando con Angular JS</title>
+    
+    <!--cargando librerias de Angular JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <h1>Ejemplo Angular JS</h1>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <form novalidate>
+            nombre: <input type="text" ng-model="user.nombre">
+            <br>
+            apellido: <input type="text" ng-model="user.apellido">
+            <br>
+            <button ng-click="reset()">reset</button>
+        </form>
+        
+        <h3>form: {{user}}</h3>
+        <h3>master: {{master}}</h3>
+    </div>
+
+    <script>
+        var app= angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.master = {nombre: "juan",apellido: "perez"};
+            $scope.reset = function(){
+                $scope.user = angular.copy($scope.master);
+            };
+            $scope.reset();
+        });
+    </script>
+
+</body>
+</html>
+
+
+------------------------------prueba05.html-----------------------------

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fabrica</h1>
+    <form action="TAREA5.html" method="get">
+        Ingrese la cantidad de horas laboradas:
+        <br>
+        <input type="number" name="horas" id="horas">
+        <br>
+        <br>
+        Seleccione su categoria:
+        <br>
+        A<input id="txtRadio" type="radio" name="txtRadio" value="A">
+        B<input id="txtRadio" type="radio" name="txtRadio" value="B">
+        C<input id="txtRadio" type="radio" name="txtRadio" value="C">
+        <br>
+        <br>
+        Ingrese sus años de servicio:
+        <br>
+        <input type="number" name="anios" id="anios">
+        <br>
+        <br>
+        <input type="button" value="Calcular Sueldo" onclick="calcularsueldo()">
+    </form>
+    <script>
+        function calcularsueldo(){
+            var horas = Number(document.getElementById("horas").value);
+            var categoria = document.querySelector("input[name=txtRadio]:checked").value;
+            var anios = Number(document.getElementById("anios").value);
+            var sueldo, sueldofinal, bonificacion = 0;
+
+            if(categoria == "A"){
+                sueldo = horas * 40;
+            }else if(categoria == "B"){
+                sueldo = horas * 35;
+            }else if(categoria == "C"){
+                sueldo = horas * 30;
+            }else{
+                alert("categoria invalida");
+            }
+            alert(anios);
+            if( anios >= 1 && anios <=3 ){
+                sueldofinal = sueldo + (sueldo * 0.15); 
+            }else if( anios >= 4 && anios <=7){
+                sueldofinal = sueldo + (sueldo * 0.20);
+            }else if( anios >= 8 && anios <= 12){
+                sueldofinal = sueldo + (sueldo * 0.30);
+            }else if( anios >= 13){
+                sueldofinal = sueldo + (sueldo * 0.35);
+            }
+        
+            return alert("Su sueldo es de: "+sueldofinal);
+        }
+    </script>
+</body>
+</html>

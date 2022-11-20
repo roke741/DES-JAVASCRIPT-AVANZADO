@@ -1,0 +1,140 @@
+<!--
+Ejercicio 01
+Desarrollar una aplicacion angular que muestre en una tabla lo datos de 
+dos salones con  5 alumnos(id, nombre, promedio, estado) cada salon con un curso(id, nombre) 
+y cada curso con un profesor(id, nombre)
+use JSon para alimentar los datos de la vista Angular.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body>
+    <body>
+        <h1>Ejemplo Angular JS</h1>
+        <div  ng-app="myApp" ng-controller="myCtrl">
+            <table border="1" cdk-table>
+                <thead>
+                    <tr>
+                        <th>SALON</th>
+                        <th>NOMBRE</th>
+                        <th>PROMEDIO</th>
+                        <th>ESTADO</th>
+                        <th>CURSO</th>
+                        <th>PROFESOR</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="salon in salones; ">
+                    <tr ng-repeat="alumno in salon.alumnos; " >
+                        <td>{{salon.idsalon}} </td>
+                        
+                        <td>
+                            {{alumno.nombre}}
+                        </td>
+                        <td>
+                            {{alumno.promedio}}
+                        </td>
+                        <td>
+                            {{alumno.estado}}
+                        </td>
+                        <td>{{salon.nombrecurso}}</td>
+                        <td>{{salon.nombreprofesor}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+       
+        </div>
+        <script>
+
+
+            var app= angular.module('myApp', []);
+            app.controller('myCtrl', function($scope) {
+                $scope.salones = [
+                    {   
+                        "idsalon": 1,
+                        "alumnos": [
+                            {
+                                "id": 1,
+                                "nombre": "Diego",
+                                "promedio": 18,
+                                "estado": "Activo",
+                            },{
+                                "id": 2,
+                                "nombre": "Pedro",
+                                "promedio": 11,
+                                "estado": "Activo",
+                            },{
+                                "id": 3,
+                                "nombre": "Max",
+                                "promedio": 15,
+                                "estado": "Activo",
+                            },{
+                                "id": 4,
+                                "nombre": "Macarius",
+                                "promedio": 12,
+                                "estado": "Activo",
+                            },{
+                                "id": 5,
+                                "nombre": "Marta",
+                                "promedio": 13,
+                                "estado": "Activo",
+                            },
+                        ]
+                        ,
+                        "idprofesor":1,
+                        "nombreprofesor": "Juan",
+                        "idCursor":1,
+                        "nombrecurso": "Programacion 1"
+                    },{
+                        "idsalon": 2,
+                        "alumnos": [
+                            {
+                                "id": 1,
+                                "nombre": "Gustavo",
+                                "promedio": 18,
+                                "estado": "Activo",
+                            },{
+                                "id": 2,
+                                "nombre": "Raul",
+                                "promedio": 11,
+                                "estado": "Activo",
+                            },{
+                                "id": 3,
+                                "nombre": "Sara",
+                                "promedio": 15,
+                                "estado": "Activo",
+                            },{
+                                "id": 4,
+                                "nombre": "Focus",
+                                "promedio": 12,
+                                "estado": "Activo",
+                            },{
+                                "id": 5,
+                                "nombre": "Renato",
+                                "promedio": 13,
+                                "estado": "Activo",
+                            },
+                        ]
+                        ,
+                        "idprofesor":2,
+                        "nombreprofesor": "Auron",
+                        "idCursor":2,
+                        "nombrecurso": "Programacion 2"
+                    }
+                ];
+                /* angular.forEach(salon, function (value, key){
+                    $scope.profesor = value.alumnos;
+                }); */
+            });
+        </script>
+    
+    </body>
+</body>
+</html>

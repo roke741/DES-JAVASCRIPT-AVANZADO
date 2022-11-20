@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ejercicio01</h2>
+    <pre>
+        Desarrollar una pagina web con formulario de notas de alumnos:
+            Un alumno puede ingresar 5 notas.
+            El alumno puede ser regular o especial
+            Si es regular el promedio es con las 5 notas
+            Si es especial el promedio en con las 4 notas mayores.
+        Para ingresar las notas use RANGE, valide las notas [0,20]
+        Seleccione el tipo con con combo 
+        Mostrar el promedio en un LABEL
+    </pre>
+    <form action="ejercicio02.html" method="get" onsubmit="return validar()">
+        Ingrese su nombre:
+        <br>
+        <input name="nombre" id="nombre" type="text">
+        <br>
+        <br>
+        Tipo de alumno:
+        <br>
+        <select name="cboTipo" id="cboTipo">
+            <option value="0" selected hidden>- Elija una Opción -</option>
+            <option value="1">regular</option>
+            <option value="2">especial</option>
+     
+        </select>
+        <br>
+        <br>        
+        Ingrese sus notas:
+        <br>
+        Nota 1 :
+        <input name="nota1" id="nota1" type="range" min="1" max="20" onchange="mostrarNota('nota1','lblNota1')">
+        <label id="lblNota1">0</label>
+        <br>
+        Nota 2 :
+        <input name="nota2" id="nota2" type="range" min="1" max="20" onchange="mostrarNota('nota2','lblNota2')">
+        <label id="lblNota2">0</label>
+        <br>
+        Nota 3 :
+        <input name="nota3" id="nota3" type="range" min="1" max="20" onchange="mostrarNota('nota3','lblNota3')">
+        <label id="lblNota3">0</label>
+        <br>
+        Nota 4 :
+        <input name="nota4" id="nota4" type="range" min="1" max="20" onchange="mostrarNota('nota4','lblNota4')">
+        <label id="lblNota4">0</label>
+        <br>
+        Nota 5 :
+        <input name="nota5" id="nota5" type="range" min="1" max="20" onchange="mostrarNota('nota5','lblNota5')">
+        <label id="lblNota5">0</label>
+        
+        <br>
+        <br>
+        <input type="button" value="Calcular Promedio" onclick="calcularPromedio()">
+        <br>
+        <br>
+        <label for="" id="respuesta"></label>
+    </form>
+
+
+
+    <script src="js/ejercicio01.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!--
+    Ejercicio01.
+Desarrollar una aplicacion angular que permita mostrar los datos de un aula y 
+sus 5 alumnos(id, nombre, promedio, estado) junto con el curso que llevan(id, nombre, precio)
+Use Scopes para el caso.
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+       <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>PROMEDIO</th>
+                <th>ESTADO</th>
+                <th>CURSO</th>
+                <th>PRECIO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="alumno in salon.alumnos ">
+                <td>{{alumno.id}}</td>
+                <td>{{alumno.nombre}}</td>
+                <td>{{alumno.promedio}}</td>
+                <td>{{alumno.estado}}</td>
+                <td>{{alumno.curso}}</td>
+                <td>{{alumno.precio}}</td>
+            </tr>
+        </tbody>
+       </table>
+    </div> 
+    <script>
+        var app= angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.salon = {
+                alumnos: [{
+                    id : 1,
+                    nombre: "jhordie", 
+                    promedio : 20 ,
+                    estado: "Activo", 
+                    curso: "Java 1", 
+                    precio :200
+                },{
+                    id : 2,
+                    nombre: "juan", 
+                    promedio : 13 ,
+                    estado: "Activo", 
+                    curso: "Java 1", 
+                    precio :200
+                },{
+                    id : 3,
+                    nombre: "luis", 
+                    promedio : 12 ,
+                    estado: "Activo", 
+                    curso: "Java 1", 
+                    precio :200
+                },{
+                    id : 4,
+                    nombre: "mateo", 
+                    promedio : 14 ,
+                    estado: "Activo", 
+                    curso: "Java 1", 
+                    precio :200
+                },{
+                    id : 5,
+                    nombre: "pedro", 
+                    promedio : 17 ,
+                    estado: "Activo", 
+                    curso: "Java 1", 
+                    precio :200
+                }],
+            };
+        });
+    </script>
+</body>
+</html>

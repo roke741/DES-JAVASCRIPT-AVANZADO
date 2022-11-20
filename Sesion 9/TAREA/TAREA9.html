@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Empleado{ 
+            codigo;
+            nombre;
+            apellido;
+            correo;
+            cargo;
+            constructor(codigo, nombre,apellido, correo, cargo){
+                this.codigo = codigo;
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.correo = correo;
+                this.cargo = cargo;
+            }
+            sueldoBruto(cargo){
+                let sueldo = 0;
+                switch(cargo){
+                    case "J":
+                        sueldo = 5000;
+                        break;
+                    case "A":
+                        sueldo = 4000;
+                        break;
+                    case "P":
+                        sueldo = 3000;
+                        break;
+                    case "S":
+                        sueldo = 2000;
+                        break;
+                    case "As":
+                        sueldo = 1500;
+                        break;
+                    default:
+                        alert("Cargo invalido")
+                }
+                return sueldo;
+            }
+            descuento(cargo){
+                var sueldoDesc = this.sueldoBruto(cargo) * 0.125;
+                return sueldoDesc;
+            }
+            sueldoNeto(cargo){
+                var sueldoFinal = this.sueldoBruto(cargo) - this.descuento(cargo);
+                alert(`
+                Codigo: ${this.codigo}
+                Nombre: ${this.nombre}
+                Apellido: ${this.apellido}
+                Correo: ${this.correo}
+                Su sueldo neto es de: ${sueldoFinal}
+                `);
+            }
+        }
+        var codigo = Number(prompt("Ingrese su codigo: "));
+        var nombre = prompt("Ingrese su nombre: ");
+        var apellido = prompt("Ingrese su apellido: ");
+        var correo = prompt("Ingrese su correo: ");
+        var cargo = prompt("Ingrese su cargo (J , A , P , S, As)");
+        var sueldoEmpleado = new Empleado(codigo,nombre,apellido,correo,cargo)
+        sueldoEmpleado.sueldoNeto(sueldoEmpleado.cargo)
+    </script>
+</body>
+</html>

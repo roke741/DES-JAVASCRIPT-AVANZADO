@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <form name="myForm" >
+            codigo: <input type="text" name="cod" ng-model="cod">
+            <br>
+            horas: <input type="number" name="hora" ng-model="hora">
+            <br>
+            tarifa <input type="number" name="tarifa" ng-model="tarifa">
+            <br>
+        </form>
+
+        <p id="salario">
+            Su sueldo es: {{salario()}}
+        </p>
+        <script>
+            var app= angular.module('myApp', []);
+            app.controller('myCtrl', function($scope) {
+                $scope.salario = function(){
+                    let sueldo = ($scope.hora * $scope.tarifa) 
+                    if( sueldo < 500){
+                        return sueldo
+                    }else if(sueldo > 501 && sueldo < 1000){
+                        return (sueldo * 0.02) + sueldo
+                    }else if(sueldo > 1001 && sueldo < 4000){
+                        return (sueldo * 0.08) + sueldo
+                    }else if(sueldo > 4001 && sueldo < 8000){
+                        return (sueldo * 0.15) + sueldo
+                    }else if(sueldo > 8001 && sueldo < 10000){
+                        return (sueldo * 0.21) + sueldo
+                    }else if(sueldo > 10001){
+                        return (sueldo * 0.30) + sueldo
+                    }
+                    
+                }
+                
+             
+            });
+        </script>
+    </div>
+</body>
+</html>

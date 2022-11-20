@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>TIENDA</h1>
+    <h3>Lista de juguetes</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Jueguetes</th>
+                <th colspan="2">Precio (S/.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monopolio</td>
+                <td>70.99</td>
+                <td>
+                    <button 
+                        onclick="
+                        monopolio.innerText = (contMono +=1) + ' Monopolio = S/. ' + (totalMono= contMono * 70.99).toFixed(2) ; 
+                        (sumaTotal.innerText = (sumaCarrito = (totalMono + totalAje + totalLeg + totalDam + totalLab).toFixed(2))); 
+                        cantidadTotal = contMono + contAje + contLeg + contDam + contLab ; 
+                        (cantidadTotal < 10 ? descuento.innerText = '3.5% = S/.'+ (totalDescuento=(sumaCarrito*0.035).toFixed(2)): cantidadTotal>= 10 && cantidadTotal <= 20?descuento.innerText = '7.0% = S/.'+ (totalDescuento=(sumaCarrito*0.070 ).toFixed(2)):  descuento.innerText = '9.5% = S/.'+ ( totalDescuento = (sumaCarrito*0.095).toFixed(2))) ; 
+                        importeTotal.innerText = (sumaCarrito - totalDescuento).toFixed(2)">
+                        Agregar
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Ajedrez</td>
+                <td>78.99</td>
+                <td>
+                    <button 
+                        onclick="ajedrez.innerText = (contAje +=1) + ' Ajedrez = S/.' + (totalAje= contAje * 78.99).toFixed(2) ; 
+                        (sumaTotal.innerText = (sumaCarrito = (totalMono + totalAje + totalLeg + totalDam + totalLab).toFixed(2))); 
+                        cantidadTotal = contMono + contAje + contLeg + contDam + contLab ; 
+                        (cantidadTotal < 10 ? descuento.innerText = '3.5% = S/.'+ (totalDescuento=(sumaCarrito*0.035).toFixed(2)): cantidadTotal>= 10 && cantidadTotal <= 20?descuento.innerText = '7.0% = S/.'+ (totalDescuento=(sumaCarrito*0.070 ).toFixed(2)):  descuento.innerText = '9.5% = S/.'+ ( totalDescuento = (sumaCarrito*0.095).toFixed(2))) ; 
+                        importeTotal.innerText = (sumaCarrito - totalDescuento).toFixed(2) ">
+                        Agregar
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Lego</td>
+                <td>100.99</td>
+                <td>
+                    <button 
+                        onclick="lego.innerText = (contLeg +=1) + ' Lego = S/.' + (totalLeg= contLeg * 100.99).toFixed(2) ;
+                        (sumaTotal.innerText = (sumaCarrito =(totalMono + totalAje + totalLeg + totalDam + totalLab).toFixed(2))); 
+                        cantidadTotal = contMono + contAje + contLeg + contDam + contLab ; 
+                        (cantidadTotal < 10 ? descuento.innerText = '3.5% = S/.'+ (totalDescuento=(sumaCarrito*0.035).toFixed(2)): cantidadTotal>= 10 && cantidadTotal <= 20?descuento.innerText = '7.0% = S/.'+ (totalDescuento=(sumaCarrito*0.070 ).toFixed(2)):  descuento.innerText = '9.5% = S/.'+ ( totalDescuento = (sumaCarrito*0.095).toFixed(2))) ; 
+                        importeTotal.innerText = (sumaCarrito - totalDescuento).toFixed(2)">
+                        Agregar
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Dama</td>
+                <td>58.50</td>
+                <td>
+                    <button 
+                        onclick="dama.innerText = (contDam +=1) + ' Dama = S/.' + (totalDam= contDam * 58.50).toFixed(2) ; 
+                        (sumaTotal.innerText = (sumaCarrito =(totalMono + totalAje + totalLeg + totalDam + totalLab).toFixed(2))); 
+                        cantidadTotal = contMono + contAje + contLeg + contDam + contLab ; 
+                        (cantidadTotal < 10 ? descuento.innerText = '3.5% = S/.'+ (totalDescuento=(sumaCarrito*0.035).toFixed(2)): cantidadTotal>= 10 && cantidadTotal <= 20?descuento.innerText = '7.0% = S/.'+ (totalDescuento=(sumaCarrito*0.070 ).toFixed(2)):  descuento.innerText = '9.5% = S/.'+ ( totalDescuento = (sumaCarrito*0.095).toFixed(2))) ; 
+                        importeTotal.innerText = (sumaCarrito - totalDescuento).toFixed(2) ">
+                        Agregar
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Laberinto</td>
+                <td>35.00</td>
+                <td>
+                    <button 
+                        onclick="laberinto.innerText = (contLab +=1) + ' Laberinto = S/.' + (totalLab= contLab * 35.00).toFixed(2) ; 
+                        (sumaTotal.innerText = (sumaCarrito = (totalMono + totalAje + totalLeg + totalDam + totalLab).toFixed(2))) ; 
+                        cantidadTotal = contMono + contAje + contLeg + contDam + contLab ; 
+                        (cantidadTotal < 10 ? descuento.innerText = '3.5% = S/.'+ (totalDescuento=(sumaCarrito*0.035).toFixed(2)): cantidadTotal>= 10 && cantidadTotal <= 20?descuento.innerText = '7.0% = S/.'+ (totalDescuento=(sumaCarrito*0.070 ).toFixed(2)):  descuento.innerText = '9.5% = S/.'+ ( totalDescuento = (sumaCarrito*0.095).toFixed(2))) ; 
+                        importeTotal.innerText = (sumaCarrito - totalDescuento).toFixed(2) ">
+                        Agregar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr width="200px" align="left" >
+    <div>
+        <h4>Detalles:</h4>
+        <hr width="200px" align="left" >
+        <span id="monopolio"></span>
+        <br>
+        <span id="ajedrez"></span>
+        <br>
+        <span id="lego"></span>
+        <br>
+        <span id="dama"></span>
+        <br>
+        <span id="laberinto"></span>
+        <br>
+        <hr width="200px" align="left" >
+        <span>Total: S/.<span id="total"> </span> </span>
+        <h4>Descuento <span id="descuento"></span></h4>
+        <h4>Importe a pagar : S/.<span id="importe"></span></h4>
+    </div>
+    <script type="text/javascript">
+        //alert("Bienvenidos")
+        let sumaCarrito = 0
+        
+        let contMono = 0
+        let contAje = 0
+        let contLeg = 0
+        let contDam = 0
+        let contLab = 0
+
+        let cantidadTotal = 0
+        const monopolio = document.getElementById('monopolio')
+        const ajedrez = document.getElementById('ajedrez')
+        const lego = document.getElementById('lego')
+        const dama = document.getElementById('dama')
+        const laberinto = document.getElementById('laberinto')
+
+        const sumaTotal = document.getElementById("total")
+
+        const descuento = document.getElementById('descuento')
+
+        let totalMono = 0
+        let totalAje = 0
+        let totalLeg = 0
+        let totalDam = 0
+        let totalLab = 0
+        let totalSuma = 0
+
+        let totalDescuento = 0
+
+        const importeTotal = document.getElementById("importe")
+    </script>
+
+</body>
+</html>

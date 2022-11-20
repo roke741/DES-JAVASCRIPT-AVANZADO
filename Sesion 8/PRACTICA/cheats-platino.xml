@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<codelist>
+	<name>Roke</name>
+    <game>
+		<name>POKEMON - PLATINO </name>
+		<gameid>CPUS 493699F6</gameid>
+		<date>2021/12/25 23:56</date>
+		<folder>
+			<name>Alternative WFC Codes</name>
+			<allowedon>1</allowedon>
+            <cheat>
+			    <name>SHINY</name>
+                <note>Shinys</note>
+			    <codes>621bfcf0 00000000 02073ed8 47004800 02073edc 02000001 e2000000 0000003c 6800480d 490b6840 88011808 9c0d8842 40510c24 20074061 04244041 940d430c 21001c28 f074aa0d 4801fe6b 46c04700 02073ee1 000000e4 021bfcf0 00000000 d2000000 00000000</codes>
+		    </cheat>
+            <cheat>
+				<name>Battle Items</name>
+				<note>(Press Select+Up)</note>
+				<codes>94000130 FFBB0000 62101F2C 00000000 B2101F2C 00000000 D5000000 03E70037 C0000000 0000000C D6000000 0000DD1C D4000000 00000001 D2000000 00000000</codes>
+			</cheat>
+		</folder>
+
+	</game>
+</codelist>

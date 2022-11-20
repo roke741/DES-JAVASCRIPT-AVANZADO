@@ -1,0 +1,118 @@
+<!--
+    ercicios:
+Ejercicio 1.
+Desarrollar una aplicacion para ingresar nombres y promedios de varios alumnos.
+a. Mostrar la lista de alumnos con sus promedios.
+b. Mostrar el promedio del grupo de alumnos.
+c. Mostrar el promedio menor y mayor ingresados 
+
+Ejercicio 2.
+En una empresa se deben ingresar datos de los empleados para dar bonificaciones.
+Los datos son: Nombre, categoria[A,B,C] y años de labor [1-10].
+Sueldos:
+A->3000
+B->2500
+C->2000
+La bonificacion a pagar sera de 10% para los que trabajaron menos de 5 años y 15% para 5 o mas.
+Mostrar las lista de empleados con sus nombres, sueldos y bonificaciones.
+Mostrar el sueldo mayor y menor.
+Mostrar el promedio de sueldos.
+---------------------------------------index.html-----------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arreglos con JS</title>
+</head>
+<body>
+    <h1>Ejemplo de arreglos con JavaScript</h1>
+    <script src="js/prueba01.js"></script>
+</body>
+</html>
+
+------------------------------------prueba01.js -----------------------------
+
+let nombres = ["Juan", "Pedro", "Luis", "Ana", "Maria"];
+let notas = [10, 5, 7, 8, 9];
+
+console.log(nombres);
+console.log(notas);
+console.log(nombres.length);
+console.log(nombres[0]);
+console.log(notas[0]);
+//agregando elementos al final del array
+nombres.push("Carlos");
+console.log(nombres);
+//eliminando elementos del final del array
+nombres.pop();
+console.log(nombres);
+//agregando elementos al inicio del array
+nombres.unshift("Carlos");
+console.log(nombres);
+//eliminando elementos del inicio del array
+nombres.shift();
+console.log(nombres);
+
+------------------------------------prueba02.js -----------------------------
+
+let nombres = ["Juan", "Pedro", "Luis", "Ana", "Maria"];
+let notas = [10, 5, 7, 8, 9];
+
+//mostrar el nombre y la nota de cada alumno
+console.log("Nombre\tNota");
+for (let i = 0; i < nombres.length; i++) {
+    console.log(nombres[i] + " tiene " + notas[i]);
+}
+
+//mostrar el promedio de notas
+let suma = 0;   
+for (let i = 0; i < notas.length; i++) {
+    suma += notas[i];
+}
+console.log("Promedio: " + suma / notas.length);
+
+
+------------------------------------prueba03.js -----------------------------
+
+let nombres = ["Juan", "Pedro", "Luis", "Ana", "Maria"];
+let notas = [10, 5, 7, 8, 9];
+
+//mostrar la nota mayor y menor
+let notaMayor = 0;
+let notaMenor = 20;
+for (let i = 0; i < notas.length; i++) {
+    if (notas[i] > notaMayor) {
+        notaMayor = notas[i];
+    }
+    if (notas[i] < notaMenor) {
+        notaMenor = notas[i];
+    }
+}
+console.log("Nota mayor: " + notaMayor);
+console.log("Nota menor: " + notaMenor);
+
+
+------------------------------------prueba04.js -----------------------------
+
+let nombres = [];
+var i= 0;
+while(confirm("Desea ingresar un nombre?")){
+    nombres[i] = prompt("Ingrese el nombre:");
+    i++;
+}
+console.log(nombres);
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos con JS</title>
+</head>
+<body>
+    <h1>Arreglos con js</h1>
+    <script src="js/prueba01.js"></script>
+</body>
+</html>
+

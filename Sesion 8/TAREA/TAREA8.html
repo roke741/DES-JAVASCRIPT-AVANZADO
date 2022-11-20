@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form >
+        <label for="">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label for="">Apellidos</label>
+        <input type="text" name="apellido" id="apellido">
+        <br>
+        <label for="">Correo</label>
+        <input type="email" name="correo" id="correo">
+        <br>
+        <label for="">Genero</label>
+        <select name="genero" id="genero">
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+            <option value="O">Otros</option>
+        </select>
+        <br>
+        <label for="">Fecha de Nacimiento</label>
+        <input type="date" name="nacimiento" id="nacimiento">
+        <br>
+        <button type="button" onclick="mostrarDatos()">Enviar</button>
+    </form>
+    <script>
+        function mostrarDatos(){
+            var nombre = $("#nombre").val();
+            var apellidos = $("#apellido").val();
+            var correo = $("#correo").val();
+            var genero = $("#genero").val();
+            var nacimiento = $("#nacimiento").val();
+
+            alert(`
+            Nombre : ${nombre}
+            Apellidos : ${apellidos}
+            Correo : ${correo}
+            Genero : ${genero}
+            Nacimiento : ${nacimiento}
+            `)
+        }
+    </script>
+</body>
+</html>

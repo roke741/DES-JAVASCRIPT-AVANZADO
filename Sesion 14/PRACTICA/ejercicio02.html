@@ -1,0 +1,144 @@
+<!--
+Desarrollar una aplicacion angular que permita ingresar y 
+mostrar los datos de un aula y sus 3 alumnos(id, nombre, promedio, estado) 
+junto con el curso que llevan(id, nombre, precio) y
+el profesor del curso(id, nombre).
+Use Scopes y formularios para el caso
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <form action="">
+            <h2>DATO1</h2>
+            Id: <input type="number" ng-model="id" >
+            <br>
+            Nombre: <input type="text" ng-model="nombre">
+            <br>
+            Promedio: <input type="number" ng-model="promedio">
+            <br>
+            Estado: <input type="text" ng-model="estado">
+            <br>
+            Curso: <input type="text" ng-model="curso">
+            <br>
+            Precio: <input type="number" ng-model="precio">
+            <br>
+            Profesor: <input type="text" ng-model="profesor">
+            <br>
+            <hr width="50%" align="left">
+            <h2>DATO2</h2>
+            Id: <input type="number" ng-model="id2" >
+            <br>
+            Nombre: <input type="text" ng-model="nombre2">
+            <br>
+            Promedio: <input type="number" ng-model="promedio2">
+            <br>
+            Estado: <input type="text" ng-model="estado2">
+            <br>
+            Curso: <input type="text" ng-model="curso2">
+            <br>
+            Precio: <input type="number" ng-model="precio2">
+            <br>
+            Profesor: <input type="text" ng-model="profesor2">
+            <br>
+            <hr width="50%" align="left">
+            <h2>DATO3</h2>
+            Id: <input type="number" ng-model="id3" >
+            <br>
+            Nombre: <input type="text" ng-model="nombre3">
+            <br>
+            Promedio: <input type="number" ng-model="promedio3">
+            <br>
+            Estado: <input type="text" ng-model="estado3">
+            <br>
+            Curso: <input type="text" ng-model="curso3">
+            <br>
+            Precio: <input type="number" ng-model="precio3">
+            <br>
+            Profesor: <input type="text" ng-model="profesor3">
+            <br>
+
+        </form>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>PROMEDIO</th>
+                    <th>ESTADO</th>
+                    <th>CURSO</th>
+                    <th>PRECIO</th>
+                    <th>PROFESOR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{nombre}}</td>
+                    <td>{{promedio}}</td>
+                    <td>{{estado}}</td>
+                    <td>{{curso}}</td>
+                    <td>{{precio}}</td>
+                    <td>{{profesor}}</td>
+                </tr>
+                <tr>
+                    <td>{{id2}}</td>
+                    <td>{{nombre2}}</td>
+                    <td>{{promedio2}}</td>
+                    <td>{{estado2}}</td>
+                    <td>{{curso2}}</td>
+                    <td>{{precio2}}</td>
+                    <td>{{profesor2}}</td>
+                </tr>
+                <tr>
+                    <td>{{id3}}</td>
+                    <td>{{nombre3}}</td>
+                    <td>{{promedio3}}</td>
+                    <td>{{estado3}}</td>
+                    <td>{{curso3}}</td>
+                    <td>{{precio3}}</td>
+                    <td>{{profesor3}}</td>
+                </tr>
+                
+                
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var app= angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+           $scope.id = this.id;
+           $scope.nombre = this.nombre;
+           $scope.promedio = this.promedio;
+           $scope.estado = this.estado;
+           $scope.curso = this.curso;
+           $scope.profesor = this.profesor;
+           
+           $scope.id2 = this.id2;
+           $scope.nombre2 = this.nombre2;
+           $scope.promedio2 = this.promedio2;
+           $scope.estado2 = this.estado2;
+           $scope.curso2 = this.curso2;
+           $scope.profesor2 = this.profesor2;
+
+           $scope.id3 = this.id3;
+           $scope.nombre3 = this.nombre3;
+           $scope.promedio3 = this.promedio3;
+           $scope.estado3 = this.estado3;
+           $scope.curso3 = this.curso3;
+           $scope.profesor3 = this.profesor3;
+
+
+        });
+    </script>   
+</body>
+</html>
